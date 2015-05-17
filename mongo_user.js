@@ -2,7 +2,7 @@ conn = new Mongo();
 db = conn.getDB("wealthbot");
 db.addUser(
     {
-      user: "webo",
+      user: "root",
       pwd: "password",
       roles: [
          "readWrite"
