@@ -40,7 +40,7 @@ class LoadClientAccountValuesData extends AbstractCsvFixture implements OrderedF
             $accountValue->setTotalInSecurities($accountRow[1]);
             $accountValue->setTotalCashInAccount($accountRow[2]);
             $accountValue->setTotalCashInMoneyMarket($accountRow[3]);
-            $accountValue->setTotalValue($accountRow[0]);
+            $accountValue->setTotalValue(!empty($accountRow[0]) ?: nul);
             $accountValue->setDate(new \DateTime($accountRow[4]));
             $accountValue->setModelDeviation($accountRow[5]);
             $accountValue->setRequiredCash(mt_rand(100, 100000));
@@ -82,9 +82,9 @@ class LoadClientAccountValuesData extends AbstractCsvFixture implements OrderedF
 
                 if ($exist) continue;
 
-                $securitiesTotal = mt_rand(0, 1000000);
-                $moneyMarket = mt_rand(0, 1000000);
-                $accountsTotal = mt_rand(0, 1000000);
+                $securitiesTotal = mt_rand(100, 1000000);
+                $moneyMarket = mt_rand(100, 1000000);
+                $accountsTotal = mt_rand(100, 1000000);
                 $total = $securitiesTotal + $moneyMarket + $accountsTotal;
 
                 $date = $account->getClient()->getCreated();
@@ -94,7 +94,7 @@ class LoadClientAccountValuesData extends AbstractCsvFixture implements OrderedF
                 $accountValue->setClientPortfolio($clientPortfolio);
                 $accountValue->setSystemClientAccount($clientSystemAccount);
                 $accountValue->setSource('td ameritrade');
-                $accountValue->setTotalInSecurities($securitiesTotal);
+                $accountValue->setTotalInSecurities(!empty($securitiesTotal) ?: null);
                 $accountValue->setTotalCashInAccount($accountsTotal);
                 $accountValue->setTotalCashInMoneyMarket($moneyMarket);
                 $accountValue->setTotalValue($total);

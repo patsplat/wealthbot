@@ -26,7 +26,7 @@ class LoadLotData extends AbstractCsvFixture implements OrderedFixtureInterface
     {
         /** @var Transaction[] $transactions */
         $transactions = $manager->getRepository('WealthbotAdminBundle:Transaction')->findBy(array(), array('id'=>'ASC'));
-
+var_dump($transactions);
         $this->lots = array();
 
         foreach ($transactions as $transaction) {
@@ -232,9 +232,9 @@ class LoadLotData extends AbstractCsvFixture implements OrderedFixtureInterface
                 }
             }
         }
-
+var_dump($this->lots);
         foreach ($this->lots as $key => $lot) {
-            $this->setReference('lot-'.$key, $lot);
+            $this->setReference('lot-' . $key, $lot);
         }
 
         $manager->flush();

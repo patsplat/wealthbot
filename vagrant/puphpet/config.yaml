@@ -164,7 +164,7 @@ apache:
             ssl_protocol: ''
             ssl_cipher: ''
             directories:
-                avd_0f6pxbks1ji4:
+                avd_l2hxavi6ityp:
                     path: /srv/wealthbot/web
                     options:
                         - Indexes

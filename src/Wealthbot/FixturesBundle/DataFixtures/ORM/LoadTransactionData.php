@@ -40,23 +40,23 @@ class LoadTransactionData extends AbstractCsvFixture implements OrderedFixtureIn
             }
             //$advisorCode = trim($item[0]);
             //$fileDate = trim($item[1]);
-            $accountNumber = trim($item[2]);
-            $transactionCode = trim($item[3]);
-            $cancelStatusFlag = trim($item[4]);
-            $symbol = trim($item[5]);
+            $accountNumber = !empty(trim($item[2])) ?: null;
+            $transactionCode = !empty(trim($item[3])) ?: null;
+            $cancelStatusFlag = !empty(trim($item[4])) ?: null;
+            $symbol = !empty(trim($item[5])) ?: null;
             //$securityCode = trim($item[6]);
-            $txDate = trim($item[7]);
-            $qty = trim($item[8]);
-            $netAmount = trim($item[9]);
-            $grossAmount = trim($item[10]);
+            $txDate = !empty(trim($item[7])) ?: null;
+            $qty = !empty(trim($item[8])) ?: null;
+            $netAmount = !empty(trim($item[9])) ?: null;
+            $grossAmount = !empty(trim($item[10])) ?: null;
             //$brokerFee = trim($item[11]);
             //$otherFee = trim($item[12]);
-            $settleDate = trim($item[13]);
+            $settleDate = !empty(trim($item[13])) ?: null;
             //$transferAccount = trim($item[14]);
             //$accountType = trim($item[15]);
-            $accruedInterest = trim($item[16]);
-            $closingMethodCode = trim($item[17]);
-            $notes = trim($item[18]);
+            $accruedInterest = !empty(trim($item[16])) ?: null;
+            $closingMethodCode = !empty(trim($item[17])) ?: null;
+            $notes = !empty(trim($item[18])) ?: null;
 
             //create transactions table and leave data for lots.
 
