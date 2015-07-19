@@ -1,4 +1,4 @@
-wealthbot.io 
+wealthbot.io
 ===============
 
 [![Software License](https://img.shields.io/badge/license-GPL-green.svg)](LICENSE)
@@ -36,6 +36,22 @@ Hi, I'm [wealthbot.io](http://wealthbot.io). Webo for short. I'm an open source 
 
 Go to http://demo.wealthbot.io to play with *all the features* before installing.
 
+## Community
+
+Join our Slack server to discuss the project in realtime.
+* Talk to the core devs and the wealthbot.io community.
+* Learn from others and ask questions.
+* Share your work and demos.
+
+https://webo-slack.herokuapp.com/
+
+Contribute to our roadmap on Trello.
+* Follow our general vision
+* Submit new feature ideas
+* Comment on ideas, to-dos and in-progress work
+
+https://trello.com/b/klhsT5Xj/wealthbot-io-roadmap-and-ideas
+
 ## Installation
 
 **Prereqs:**
@@ -59,6 +75,13 @@ Note: To use the app you'll need to setup an SMTP server with authentication. Th
 If you want to take a look around your vagrant box you can `vagrant ssh`.
 The config is located in `wealthbot\vagrant\puphpet\config.yaml`
 
-We strongly recommend running all console commands inside the vagrant box. 
+We strongly recommend running all console commands inside the vagrant box.
 
+# Contributing 
+
+We love pull requests! The details on how to contribute to Wealthbot can be found [here](CONTRIBUTING.md).
+
+
+
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/wealthbot-io/wealthbot/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
 
